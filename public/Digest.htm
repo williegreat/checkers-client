@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://localhost:8080/statistics3 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Digest</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="http://localhost:8080/favicon.ico">
+    <link rel="shortcut icon" href="http://localhost:8080/favicon.ico"><link href="./Digest_files/main.css" rel="stylesheet"><style type="text/css">.styles_reactWaves__1M36F {
+  width: 85%;
+  display: inline-block;
+  text-align: center;
+  margin: 2em auto;
+  padding: 4px 15px 0 40px;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */ }
+  .styles_reactWaves__1M36F ::-webkit-scrollbar {
+    margin-top: 20px;
+    width: 8px;
+    height: 8px; }
+  .styles_reactWaves__1M36F ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 1px grey;
+    border-radius: 10px; }
+  .styles_reactWaves__1M36F ::-webkit-scrollbar-thumb {
+    background: #4F49E2;
+    border-radius: 10px; }
+  .styles_reactWaves__1M36F ::-webkit-scrollbar-thumb:hover {
+    background: rgba(79, 73, 226, 0.85); }
+</style><style data-jss="" data-meta="MuiDrawer">
+.MuiDrawer-docked {
+  flex: 0 0 auto;
+}
+.MuiDrawer-paper {
+  top: 0;
+  flex: 1 0 auto;
+  height: 100%;
+  display: flex;
+  outline: 0;
+  z-index: 1200;
+  position: fixed;
+  overflow-y: auto;
+  flex-direction: column;
+  -webkit-overflow-scrolling: touch;
+}
+.MuiDrawer-paperAnchorLeft {
+  left: 0;
+  right: auto;
+}
+.MuiDrawer-paperAnchorRight {
+  left: auto;
+  right: 0;
+}
+.MuiDrawer-paperAnchorTop {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  height: auto;
+  max-height: 100%;
+}
+.MuiDrawer-paperAnchorBottom {
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  max-height: 100%;
+}
+.MuiDrawer-paperAnchorDockedLeft {
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiDrawer-paperAnchorDockedTop {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiDrawer-paperAnchorDockedRight {
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiDrawer-paperAnchorDockedBottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+</style><style data-jss="" data-meta="MuiSnackbar">
+.MuiSnackbar-root {
+  left: 8px;
+  right: 8px;
+  display: flex;
+  z-index: 1400;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+.MuiSnackbar-anchorOriginTopCenter {
+  top: 8px;
+}
+@media (min-width:600px) {
+  .MuiSnackbar-anchorOriginTopCenter {
+    top: 24px;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
+.MuiSnackbar-anchorOriginBottomCenter {
+  bottom: 8px;
+}
+@media (min-width:600px) {
+  .MuiSnackbar-anchorOriginBottomCenter {
+    left: 50%;
+    right: auto;
+    bottom: 24px;
+    transform: translateX(-50%);
+  }
+}
+.MuiSnackbar-anchorOriginTopRight {
+  top: 8px;
+  justify-content: flex-end;
+}
+@media (min-width:600px) {
+  .MuiSnackbar-anchorOriginTopRight {
+    top: 24px;
+    left: auto;
+    right: 24px;
+  }
+}
+.MuiSnackbar-anchorOriginBottomRight {
+  bottom: 8px;
+  justify-content: flex-end;
+}
+@media (min-width:600px) {
+  .MuiSnackbar-anchorOriginBottomRight {
+    left: auto;
+    right: 24px;
+    bottom: 24px;
+  }
+}
+.MuiSnackbar-anchorOriginTopLeft {
+  top: 8px;
+  justify-content: flex-start;
+}
+@media (min-width:600px) {
+  .MuiSnackbar-anchorOriginTopLeft {
+    top: 24px;
+    left: 24px;
+    right: auto;
+  }
+}
+.MuiSnackbar-anchorOriginBottomLeft {
+  bottom: 8px;
+  justify-content: flex-start;
+}
+@media (min-width:600px) {
+  .MuiSnackbar-anchorOriginBottomLeft {
+    left: 24px;
+    right: auto;
+    bottom: 24px;
+  }
+}
+</style><style data-jss="" data-meta="ErrorBoundary">
+.ErrorBoundary-root-1 {
+  background-color: #3f51b5;
+}
+.ErrorBoundary-wrapper-2 {
+  height: 100vh;
+  background: url(/src/components/login/Artboard-98dd4fc6.png) center no-repeat;
+}
+.ErrorBoundary-loginBox-3 {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 20%;
+  bottom: 0;
+  height: 300px;
+  margin: auto;
+  position: absolute;
+}
+.ErrorBoundary-title-4 {
+  color: rgba(255,255,255,0.3);
+  width: 100%;
+  opacity: 0.6;
+  font-size: 2.8vw;
+  text-align: center;
+  font-family: Roboto;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.ErrorBoundary-title-4 h3 {
+  color: rgba(255,255,255,0.3);
+}
+.ErrorBoundary-input-5 {
+  width: 100%;
+  border: 1px solid gray;
+  height: 50px;
+  font-size: 24px;
+  margin-top: 10px;
+  font-family: Roboto;
+  padding-left: 17px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background-color: #FFF;
+}
+.ErrorBoundary-input-5 ::placeholder {
+  color: #323b3d;
+  opacity: 1;
+  font-size: 18px;
+  font-family: Roboto;
+}
+.ErrorBoundary-input-5:first-child {
+  margin-top: 40px;
+}
+.ErrorBoundary-button-6 {
+  color: #FFF;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  height: 50px;
+  font-size: 18px;
+  box-shadow: none;
+  margin-top: 40px;
+  font-family: Roboto;
+  font-weight: 300;
+  border-radius: 0;
+  background-color: #004a87;
+}
+.ErrorBoundary-button-6:hover {
+  background-color: #004a87;
+}
+.ErrorBoundary-button-6 > span:hover {
+  background-color: #004a87;
+}
+.ErrorBoundary-warning-7 {
+  color: #a30000;
+  display: flex;
+  font-size: 40px;
+  align-items: center;
+  font-weight: 500;
+}
+.ErrorBoundary-description-8 {
+  color: rgba(255,255,255,0.3);
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.ErrorBoundary-okButton-9 {
+  color: #ffffff;
+  width: 130px;
+  height: 54px;
+  font-size: 24px;
+  margin-left: auto;
+  border-radius: 2px;
+  background-color: #a30000;
+}
+.ErrorBoundary-okButton-9:hover {
+  background-color: #a30000!important;
+}
+</style><style data-jss="" data-meta="MuiPaper">
+.MuiPaper-root-20 {
+  color: #313030;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+.MuiPaper-rounded-21 {
+  border-radius: 4px;
+}
+.MuiPaper-elevation0-22 {
+  box-shadow: none;
+}
+.MuiPaper-elevation1-23 {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation2-24 {
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation3-25 {
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation4-26 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation5-27 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation6-28 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation7-29 {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation8-30 {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation9-31 {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation10-32 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation11-33 {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation12-34 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation13-35 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation14-36 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation15-37 {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation16-38 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation17-39 {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation18-40 {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation19-41 {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation20-42 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation21-43 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation22-44 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation23-45 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation24-46 {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+</style><style data-jss="" data-meta="MuiAppBar">
+.MuiAppBar-root-11 {
+  width: 100%;
+  display: flex;
+  z-index: 1100;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  flex-direction: column;
+}
+.MuiAppBar-positionFixed-12 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: fixed;
+}
+@media print {
+  .MuiAppBar-positionFixed-12 {
+    position: absolute;
+  }
+}
+.MuiAppBar-positionAbsolute-13 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: absolute;
+}
+.MuiAppBar-positionSticky-14 {
+  top: 0;
+  left: auto;
+  right: 0;
+  position: sticky;
+}
+.MuiAppBar-positionStatic-15 {
+  position: static;
+  transform: translateZ(0);
+}
+.MuiAppBar-positionRelative-16 {
+  position: relative;
+}
+.MuiAppBar-colorDefault-17 {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #f5f5f5;
+}
+.MuiAppBar-colorPrimary-18 {
+  color: #fff;
+  background-color: #007bb3;
+}
+.MuiAppBar-colorSecondary-19 {
+  color: #ffffff;
+  background-color: #0044ff;
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.MuiSvgIcon-root-63 {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary-64 {
+  color: #007bb3;
+}
+.MuiSvgIcon-colorSecondary-65 {
+  color: #0044ff;
+}
+.MuiSvgIcon-colorAction-66 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiSvgIcon-colorError-67 {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled-68 {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiSvgIcon-fontSizeInherit-69 {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall-70 {
+  font-size: 1.25rem;
+}
+.MuiSvgIcon-fontSizeLarge-71 {
+  font-size: 2.1875rem;
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root-151 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple-152 {
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible-153 {
+  opacity: 0.3;
+  animation: MuiTouchRipple-keyframes-enter-158 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+.MuiTouchRipple-ripplePulsate-154 {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child-155 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving-156 {
+  opacity: 0;
+  animation: MuiTouchRipple-keyframes-exit-159 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate-157 {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: MuiTouchRipple-keyframes-pulsate-160 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-enter-158 {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-exit-159 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-pulsate-160 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root-60 {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root-60::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root-60.MuiButtonBase-disabled-61 {
+  cursor: default;
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiTypography">
+.MuiTypography-root-78 {
+  margin: 0;
+}
+.MuiTypography-body2-79 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+.MuiTypography-body1-80 {
+  font-size: 16px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-caption-81 {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.66;
+  letter-spacing: 0.03333em;
+}
+.MuiTypography-button-82 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+}
+.MuiTypography-h1-83 {
+  font-size: 36px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.167;
+  letter-spacing: -0.01562em;
+}
+.MuiTypography-h2-84 {
+  font-size: 27px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: -0.00833em;
+}
+.MuiTypography-h3-85 {
+  font-size: 21px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 600;
+  line-height: 1.167;
+  letter-spacing: 0em;
+}
+.MuiTypography-h4-86 {
+  font-size: 20px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.235;
+  letter-spacing: 0.00735em;
+}
+.MuiTypography-h5-87 {
+  font-size: 18px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+.MuiTypography-h6-88 {
+  font-size: 1.25rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+.MuiTypography-subtitle1-89 {
+  font-size: 1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0.00938em;
+}
+.MuiTypography-subtitle2-90 {
+  font-size: 0.875rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.57;
+  letter-spacing: 0.00714em;
+}
+.MuiTypography-overline-91 {
+  font-size: 0.75rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 2.66;
+  letter-spacing: 0.08333em;
+  text-transform: uppercase;
+}
+.MuiTypography-srOnly-92 {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+.MuiTypography-alignLeft-93 {
+  text-align: left;
+}
+.MuiTypography-alignCenter-94 {
+  text-align: center;
+}
+.MuiTypography-alignRight-95 {
+  text-align: right;
+}
+.MuiTypography-alignJustify-96 {
+  text-align: justify;
+}
+.MuiTypography-noWrap-97 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.MuiTypography-gutterBottom-98 {
+  margin-bottom: 0.35em;
+}
+.MuiTypography-paragraph-99 {
+  margin-bottom: 16px;
+}
+.MuiTypography-colorInherit-100 {
+  color: inherit;
+}
+.MuiTypography-colorPrimary-101 {
+  color: #007bb3;
+}
+.MuiTypography-colorSecondary-102 {
+  color: #0044ff;
+}
+.MuiTypography-colorTextPrimary-103 {
+  color: #313030;
+}
+.MuiTypography-colorTextSecondary-104 {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiTypography-colorError-105 {
+  color: #f44336;
+}
+.MuiTypography-displayInline-106 {
+  display: inline;
+}
+.MuiTypography-displayBlock-107 {
+  display: block;
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.MuiIconButton-root-51 {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 0;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.MuiIconButton-root-51:hover {
+  background-color: transparent;
+}
+.MuiIconButton-root-51.MuiIconButton-disabled-57 {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+@media (hover: none) {
+  .MuiIconButton-root-51:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-edgeStart-52 {
+  margin-left: -12px;
+}
+.MuiIconButton-sizeSmall-58.MuiIconButton-edgeStart-52 {
+  margin-left: -3px;
+}
+.MuiIconButton-edgeEnd-53 {
+  margin-right: -12px;
+}
+.MuiIconButton-sizeSmall-58.MuiIconButton-edgeEnd-53 {
+  margin-right: -3px;
+}
+.MuiIconButton-colorInherit-54 {
+  color: inherit;
+}
+.MuiIconButton-colorPrimary-55 {
+  color: #007bb3;
+}
+.MuiIconButton-colorPrimary-55:hover {
+  background-color: rgba(0, 123, 179, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorPrimary-55:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-colorSecondary-56 {
+  color: #0044ff;
+}
+.MuiIconButton-colorSecondary-56:hover {
+  background-color: rgba(0, 68, 255, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorSecondary-56:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-sizeSmall-58 {
+  padding: 3px;
+  font-size: 1.125rem;
+}
+.MuiIconButton-label-59 {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiToolbar">
+.MuiToolbar-root-47 {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+.MuiToolbar-gutters-48 {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width:600px) {
+  .MuiToolbar-gutters-48 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+.MuiToolbar-regular-49 {
+  min-height: 56px;
+}
+@media (min-width:0px) and (orientation: landscape) {
+  .MuiToolbar-regular-49 {
+    min-height: 48px;
+  }
+}
+@media (min-width:600px) {
+  .MuiToolbar-regular-49 {
+    min-height: 64px;
+  }
+}
+.MuiToolbar-dense-50 {
+  min-height: 48px;
+}
+</style><style data-jss="" data-meta="MuiTooltip">
+.MuiTooltip-popper-110 {
+  flip: false;
+  z-index: 1500;
+  pointer-events: none;
+}
+.MuiTooltip-popperInteractive-111 {
+  pointer-events: auto;
+}
+.MuiTooltip-popperArrow-112[x-placement*="bottom"] .MuiTooltip-arrow-115 {
+  top: 0;
+  flip: false;
+  left: 0;
+  width: 2em;
+  height: 1em;
+  margin-top: -0.95em;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.MuiTooltip-popperArrow-112[x-placement*="top"] .MuiTooltip-arrow-115 {
+  flip: false;
+  left: 0;
+  width: 2em;
+  bottom: 0;
+  height: 1em;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: -0.95em;
+}
+.MuiTooltip-popperArrow-112[x-placement*="right"] .MuiTooltip-arrow-115 {
+  flip: false;
+  left: 0;
+  width: 1em;
+  height: 2em;
+  margin-top: 4px;
+  margin-left: -0.95em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow-112[x-placement*="left"] .MuiTooltip-arrow-115 {
+  flip: false;
+  right: 0;
+  width: 1em;
+  height: 2em;
+  margin-top: 4px;
+  margin-right: -0.95em;
+  margin-bottom: 4px;
+}
+.MuiTooltip-popperArrow-112[x-placement*="left"] .MuiTooltip-arrow-115::before {
+  flip: false;
+  border-color: transparent transparent transparent currentcolor;
+  border-width: 1em 0 1em 1em;
+}
+.MuiTooltip-popperArrow-112[x-placement*="right"] .MuiTooltip-arrow-115::before {
+  flip: false;
+  border-color: transparent currentcolor transparent transparent;
+  border-width: 1em 1em 1em 0;
+}
+.MuiTooltip-popperArrow-112[x-placement*="top"] .MuiTooltip-arrow-115::before {
+  flip: false;
+  border-color: currentcolor transparent transparent transparent;
+  border-width: 1em 1em 0 1em;
+}
+.MuiTooltip-popperArrow-112[x-placement*="bottom"] .MuiTooltip-arrow-115::before {
+  flip: false;
+  border-color: transparent transparent currentcolor transparent;
+  border-width: 0 1em 1em 1em;
+}
+.MuiTooltip-tooltip-113 {
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.625rem;
+  max-width: 300px;
+  word-wrap: break-word;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.4em;
+  border-radius: 4px;
+  background-color: rgba(97, 97, 97, 0.9);
+}
+.MuiTooltip-tooltipArrow-114 {
+  margin: 0;
+  position: relative;
+}
+.MuiTooltip-arrow-115 {
+  color: rgba(97, 97, 97, 0.9);
+  position: absolute;
+  font-size: 6px;
+}
+.MuiTooltip-arrow-115::before {
+  width: 0;
+  height: 0;
+  margin: auto;
+  content: "";
+  display: block;
+  border-style: solid;
+}
+.MuiTooltip-touch-116 {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.14286em;
+}
+.MuiTooltip-tooltipPlacementLeft-117 {
+  margin: 0 24px ;
+  transform-origin: right center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementLeft-117 {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementRight-118 {
+  margin: 0 24px;
+  transform-origin: left center;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementRight-118 {
+    margin: 0 14px;
+  }
+}
+.MuiTooltip-tooltipPlacementTop-119 {
+  margin: 24px 0;
+  transform-origin: center bottom;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementTop-119 {
+    margin: 14px 0;
+  }
+}
+.MuiTooltip-tooltipPlacementBottom-120 {
+  margin: 24px 0;
+  transform-origin: center top;
+}
+@media (min-width:600px) {
+  .MuiTooltip-tooltipPlacementBottom-120 {
+    margin: 14px 0;
+  }
+}
+</style><style data-jss="" data-meta="ButtonAppBar">
+.ButtonAppBar-root-8 {
+  flex-grow: 1;
+}
+.ButtonAppBar-grow-9 {
+  flex-grow: 1;
+}
+.ButtonAppBar-menuButton-10 {
+  color: #007bb3;
+  margin-left: -12px;
+  margin-right: 8px;
+}
+.ButtonAppBar-menuButton-10 svg {
+  width: 21px;
+}
+</style><style data-jss="" data-meta="Typohraphy">
+.Typohraphy-root-77 {
+  width: 100%;
+  max-width: 500px;
+}
+</style><style data-jss="" data-meta="HeaderBarRoutes">
+.HeaderBarRoutes-clicked-132 {
+  cursor: pointer;
+}
+.HeaderBarRoutes-appbarMenu-133 {
+  color: #616161;
+  display: flex;
+  padding: 4px 4px 0px 4px;
+  align-items: center;
+  border-top-right-radius: 44px 43px;
+  border-bottom-right-radius: 44px 43px;
+}
+.HeaderBarRoutes-appbarMenu-133 .menu-item {
+  padding: 18px 0px 18px 0px;
+  margin-right: 20px;
+  border-bottom: 4px solid transparent;
+}
+.HeaderBarRoutes-appbarMenu-133 .menu-item :visited {
+  color: #000;
+}
+.HeaderBarRoutes-appbarMenu-133 .menu-item :hover {
+  padding: 18px 0px 18px 0px;
+  margin-top: 4px;
+  border-bottom: 4px solid #007bb3;
+}
+.HeaderBarRoutes-appbarMenu-133 .menu-item.selected {
+  color: #007bb3;
+  padding: 18px 0px 18px 0px;
+  border-bottom: 4px solid #007bb3;
+}
+.HeaderBarRoutes-appbarMenu-133 .menu-item.default {
+  border-bottom: 4px solid transparent;
+}
+</style><style data-jss="" data-meta="ContextMenu">
+.ContextMenu-center-121 {
+  top: 0;
+  flex: 0 1 auto;
+  order: 0;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.ContextMenu-root-122 {
+  z-index: 100000000;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  max-height: 500px;
+}
+.ContextMenu-removeOutline-123:focus {
+  outline: none;
+}
+.ContextMenu-listBox-124 {
+  height: 100%;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.ContextMenu-searchInput-125 {
+  background-color: transparent;
+}
+.ContextMenu-link-126 {
+  cursor: pointer;
+  align-self: center;
+  margin-left: 10px;
+  text-decoration: none;
+}
+.ContextMenu-linkButton-127 {
+  color: white;
+  margin-left: 5px;
+  border-color: white;
+  margin-right: 16px;
+}
+.ContextMenu-headerBox-128 {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+  margin-left: 25px;
+  margin-bottom: 15px;
+  justify-content: flex-start;
+}
+.ContextMenu-headerDivider-129 {
+  width: 100%;
+  height: 1px;
+  box-sizing: border-box;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  background-color: #007bb3;
+}
+.ContextMenu-bottomDivider-130 {
+  width: 100%;
+  height: 1px;
+  box-sizing: border-box;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  background-color: #979797;;
+}
+.ContextMenu-noResults-131 {
+  min-width: 360px;
+  padding-left: 8px;
+}
+</style><style data-jss="" data-meta="TextWithTooltip">
+.force-white * {
+  color: white !important;
+}
+.TextWithTooltip-paragraph-108 {
+  margin: 0;
+}
+.TextWithTooltip-toolTipWrapper-109 {
+  word-break: break-all;
+}
+</style><style data-jss="" data-meta="HeaderBarContextSelect">
+.HeaderBarContextSelect-wrapper-72 {
+  width: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.HeaderBarContextSelect-title-73 {
+  overflow: hidden;
+}
+.HeaderBarContextSelect-leftAlign-74 {
+  margin-left: 8px;
+  padding-top: 2px;
+}
+.HeaderBarContextSelect-textSecondary-75 {
+  color: #828828;
+}
+.HeaderBarContextSelect-setBold-76 {
+  font-weight: 700;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.makeStyles-notification-134 {
+  display: flex;
+  align-items: center;
+  padding-top: 14px;
+  padding-right: 8px;
+  flex-direction: column;
+}
+.makeStyles-amount-135 {
+  padding: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+</style><style data-jss="" data-meta="HeaderBar">
+.HeaderBar-navContainer-2 {
+  height: 67px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.3);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.HeaderBar-iconsBar-3 {
+  display: flex;
+  line-height: 28px;
+  justify-self: flex-end;
+  background-color: #fff;
+}
+.HeaderBar-iconsBar-3 .badges {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+}
+.HeaderBar-iconsBar-3 .badges .notifications {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: 4px;
+  align-items: center;
+  margin-right: 1em;
+  align-content: stretch;
+  flex-direction: column;
+  justify-content: center;
+}
+.HeaderBar-iconsBar-3 .badges .notifications span {
+  margin-top: 2px;
+  justify-self: flex-end;
+}
+.HeaderBar-iconsBar-3 .badges .notifications svg > path {
+  fill: #d8d8d8;
+}
+.HeaderBar-border-radius-container-4 {
+  height: 67px;
+  display: flex;
+  flex-wrap: nowrap;
+  box-shadow: none !important;
+  align-items: center;
+  border-radius: 0 33.5px 33.5px 0;
+  padding-right: 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #e0e0e0;
+}
+.HeaderBar-border-radius-container-4 .margin-item {
+  margin-right: 10px;
+}
+.HeaderBar-border-radius-container-4 .context {
+  display: flex;
+  flex-wrap: nowrap;
+  font-family: Roboto;
+  align-content: stretch;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.HeaderBar-appBarContent-5 {
+  display: flex;
+  flex-grow: 1;
+  line-height: 18px;
+  justify-content: space-between;
+}
+.HeaderBar-appBarContent-5 .link {
+  text-decoration: none;
+}
+.HeaderBar-appBarContent-5 .link > .selected {
+  font-weight: bold;
+}
+.HeaderBar-appBarContent-5 .default {
+  color: #000;
+}
+.HeaderBar-appBarContent-5 .link> p:not(.selected):hover {
+  color: rgb(0, 96, 250);
+}
+.HeaderBar-logoutLink-6 {
+  color: rgba(0, 0, 0, 0.54);
+  margin-top: auto;
+  margin-left: 10px;
+  user-select: none;
+  margin-right: 10px;
+  margin-bottom: auto;
+  text-decoration: none;
+}
+.HeaderBar-logoutIcon-7 > svg {
+  fill: rgba(0, 0, 0, 0.54);
+  width: 20px;
+  height: 20px;
+}
+</style><style data-jss="" data-meta="makeStyles">
+.makeStyles-wrapper-137 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: aliceblue;
+}
+.makeStyles-searchWrapper-138 {
+  padding: 0;
+  background-color: unset;
+}
+.makeStyles-dialog-139 {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+.makeStyles-textField-140 {
+  width: 173px;
+  height: 23px;
+  padding: 0 0 0 10px;
+  font-family: inherit;
+  border-color: #007bb3;
+}
+.makeStyles-appBar-141 {
+  height: 50px;
+  position: relative;
+}
+.makeStyles-title-142 {
+  flex: 1;
+  margin-left: 16px;
+}
+.makeStyles-chartContainer-143 {
+  height: calc(100% - 50px);
+  display: flex;
+  margin-top: 12px;
+  align-items: center;
+}
+.makeStyles-infoTitle-144 {
+  margin-left: 30px;
+  margin-right: auto;
+}
+.makeStyles-toolbar-145 {
+  color: black;
+  background-color: aliceblue;
+}
+</style><style data-jss="" data-meta="SingleDialog">
+
+</style><style data-jss="" data-meta="SideMenu">
+.SideMenu-list-1 {
+  width: 250px;
+}
+</style><style data-jss="" data-meta="DataChart">
+.DataChart-container-136 {
+  display: flex;
+  align-items: center;
+}
+</style><style data-jss="" data-meta="DataChart">
+.DataChart-container-146 {
+  display: flex;
+  align-items: center;
+}
+</style><style data-jss="" data-meta="DataChart">
+.DataChart-container-147 {
+  display: flex;
+  align-items: center;
+}
+</style><style data-jss="" data-meta="DataChart">
+.DataChart-container-148 {
+  display: flex;
+  align-items: center;
+}
+</style><style data-jss="" data-meta="DataChart">
+.DataChart-container-149 {
+  display: flex;
+  align-items: center;
+}
+</style><style data-jss="" data-meta="DataChart">
+.DataChart-container-150 {
+  display: flex;
+  align-items: center;
+}
+</style><style data-jss="" data-meta="MuiPaper">
+.MuiPaper-root {
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  background-color: #fff;
+}
+.MuiPaper-rounded {
+  border-radius: 4px;
+}
+.MuiPaper-outlined {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.MuiPaper-elevation0 {
+  box-shadow: none;
+}
+.MuiPaper-elevation1 {
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 1px 3px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation2 {
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation3 {
+  box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 1px 8px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation4 {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation5 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation6 {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation7 {
+  box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation8 {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation9 {
+  box-shadow: 0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation10 {
+  box-shadow: 0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation11 {
+  box-shadow: 0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation12 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation13 {
+  box-shadow: 0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation14 {
+  box-shadow: 0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation15 {
+  box-shadow: 0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation16 {
+  box-shadow: 0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation17 {
+  box-shadow: 0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation18 {
+  box-shadow: 0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation19 {
+  box-shadow: 0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation20 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation21 {
+  box-shadow: 0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation22 {
+  box-shadow: 0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation23 {
+  box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12);
+}
+.MuiPaper-elevation24 {
+  box-shadow: 0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12);
+}
+</style><style data-jss="" data-meta="MuiSvgIcon">
+.MuiSvgIcon-root {
+  fill: currentColor;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  flex-shrink: 0;
+  user-select: none;
+}
+.MuiSvgIcon-colorPrimary {
+  color: #3f51b5;
+}
+.MuiSvgIcon-colorSecondary {
+  color: #f50057;
+}
+.MuiSvgIcon-colorAction {
+  color: rgba(0, 0, 0, 0.54);
+}
+.MuiSvgIcon-colorError {
+  color: #f44336;
+}
+.MuiSvgIcon-colorDisabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+.MuiSvgIcon-fontSizeInherit {
+  font-size: inherit;
+}
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem;
+}
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2.1875rem;
+}
+</style><style data-jss="" data-meta="MuiTouchRipple">
+.MuiTouchRipple-root {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  position: absolute;
+  border-radius: inherit;
+  pointer-events: none;
+}
+.MuiTouchRipple-ripple {
+  opacity: 0;
+  position: absolute;
+}
+.MuiTouchRipple-rippleVisible {
+  opacity: 0.3;
+  animation: MuiTouchRipple-keyframes-enter 550ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+}
+.MuiTouchRipple-ripplePulsate {
+  animation-duration: 200ms;
+}
+.MuiTouchRipple-child {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.MuiTouchRipple-childLeaving {
+  opacity: 0;
+  animation: MuiTouchRipple-keyframes-exit 550ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.MuiTouchRipple-childPulsate {
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: MuiTouchRipple-keyframes-pulsate 2500ms cubic-bezier(0.4, 0, 0.2, 1) 200ms infinite;
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-enter {
+  0% {
+    opacity: 0.1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-exit {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes MuiTouchRipple-keyframes-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+</style><style data-jss="" data-meta="MuiButtonBase">
+.MuiButtonBase-root {
+  color: inherit;
+  border: 0;
+  cursor: pointer;
+  margin: 0;
+  display: inline-flex;
+  outline: 0;
+  padding: 0;
+  position: relative;
+  align-items: center;
+  user-select: none;
+  border-radius: 0;
+  vertical-align: middle;
+  -moz-appearance: none;
+  justify-content: center;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.MuiButtonBase-root::-moz-focus-inner {
+  border-style: none;
+}
+.MuiButtonBase-root.Mui-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+</style><style data-jss="" data-meta="MuiIconButton">
+.MuiIconButton-root {
+  flex: 0 0 auto;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 12px;
+  overflow: visible;
+  font-size: 1.5rem;
+  text-align: center;
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 50%;
+}
+.MuiIconButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.MuiIconButton-root.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  background-color: transparent;
+}
+@media (hover: none) {
+  .MuiIconButton-root:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-edgeStart {
+  margin-left: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeStart {
+  margin-left: -3px;
+}
+.MuiIconButton-edgeEnd {
+  margin-right: -12px;
+}
+.MuiIconButton-sizeSmall.MuiIconButton-edgeEnd {
+  margin-right: -3px;
+}
+.MuiIconButton-colorInherit {
+  color: inherit;
+}
+.MuiIconButton-colorPrimary {
+  color: #3f51b5;
+}
+.MuiIconButton-colorPrimary:hover {
+  background-color: rgba(63, 81, 181, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorPrimary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-colorSecondary {
+  color: #f50057;
+}
+.MuiIconButton-colorSecondary:hover {
+  background-color: rgba(245, 0, 87, 0.08);
+}
+@media (hover: none) {
+  .MuiIconButton-colorSecondary:hover {
+    background-color: transparent;
+  }
+}
+.MuiIconButton-sizeSmall {
+  padding: 3px;
+  font-size: 1.125rem;
+}
+.MuiIconButton-label {
+  width: 100%;
+  display: flex;
+  align-items: inherit;
+  justify-content: inherit;
+}
+</style><style data-jss="" data-meta="MuiDialog">
+@media print {
+  .MuiDialog-root {
+    position: absolute !important;
+  }
+}
+.MuiDialog-scrollPaper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.MuiDialog-scrollBody {
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+.MuiDialog-scrollBody:after {
+  width: 0;
+  height: 100%;
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+}
+.MuiDialog-container {
+  height: 100%;
+  outline: 0;
+}
+@media print {
+  .MuiDialog-container {
+    height: auto;
+  }
+}
+.MuiDialog-paper {
+  margin: 32px;
+  position: relative;
+  overflow-y: auto;
+}
+@media print {
+  .MuiDialog-paper {
+    box-shadow: none;
+    overflow-y: visible;
+  }
+}
+.MuiDialog-paperScrollPaper {
+  display: flex;
+  max-height: calc(100% - 64px);
+  flex-direction: column;
+}
+.MuiDialog-paperScrollBody {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.MuiDialog-paperWidthFalse {
+  max-width: calc(100% - 64px);
+}
+.MuiDialog-paperWidthXs {
+  max-width: 444px;
+}
+@media (max-width:507.95px) {
+  .MuiDialog-paperWidthXs.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthSm {
+  max-width: 600px;
+}
+@media (max-width:663.95px) {
+  .MuiDialog-paperWidthSm.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthMd {
+  max-width: 960px;
+}
+@media (max-width:1023.95px) {
+  .MuiDialog-paperWidthMd.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthLg {
+  max-width: 1280px;
+}
+@media (max-width:1343.95px) {
+  .MuiDialog-paperWidthLg.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperWidthXl {
+  max-width: 1920px;
+}
+@media (max-width:1983.95px) {
+  .MuiDialog-paperWidthXl.MuiDialog-paperScrollBody {
+    max-width: calc(100% - 64px);
+  }
+}
+.MuiDialog-paperFullWidth {
+  width: calc(100% - 64px);
+}
+.MuiDialog-paperFullScreen {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+  max-height: none;
+  border-radius: 0;
+}
+.MuiDialog-paperFullScreen.MuiDialog-paperScrollBody {
+  margin: 0;
+  max-width: 100%;
+}
+</style><style data-jss="" data-meta="MuiList">
+.MuiList-root {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  list-style: none;
+}
+.MuiList-padding {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.MuiList-subheader {
+  padding-top: 0;
+}
+</style><style data-jss="" data-meta="MuiListItem">
+.MuiListItem-root {
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+  text-align: left;
+  align-items: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+.MuiListItem-root.Mui-focusVisible {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+.MuiListItem-root.Mui-selected, .MuiListItem-root.Mui-selected:hover {
+  background-color: rgba(0, 0, 0, 0.14);
+}
+.MuiListItem-root.Mui-disabled {
+  opacity: 0.5;
+}
+.MuiListItem-container {
+  position: relative;
+}
+.MuiListItem-dense {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.MuiListItem-alignItemsFlexStart {
+  align-items: flex-start;
+}
+.MuiListItem-divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background-clip: padding-box;
+}
+.MuiListItem-gutters {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.MuiListItem-button {
+  transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.MuiListItem-button:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+@media (hover: none) {
+  .MuiListItem-button:hover {
+    background-color: transparent;
+  }
+}
+.MuiListItem-secondaryAction {
+  padding-right: 48px;
+}
+</style><style data-jss="" data-meta="MuiPopover">
+.MuiPopover-paper {
+  outline: 0;
+  position: absolute;
+  max-width: calc(100% - 32px);
+  min-width: 16px;
+  max-height: calc(100% - 32px);
+  min-height: 16px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+</style><style data-jss="" data-meta="MuiMenu">
+.MuiMenu-paper {
+  max-height: calc(100% - 96px);
+  -webkit-overflow-scrolling: touch;
+}
+.MuiMenu-list {
+  outline: 0;
+}
+</style><style data-jss="" data-meta="MuiMenuItem">
+.MuiMenuItem-root {
+  width: auto;
+  overflow: hidden;
+  font-size: 1rem;
+  box-sizing: border-box;
+  min-height: 48px;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-top: 6px;
+  white-space: nowrap;
+  letter-spacing: 0.00938em;
+  padding-bottom: 6px;
+}
+@media (min-width:600px) {
+  .MuiMenuItem-root {
+    min-height: auto;
+  }
+}
+.MuiMenuItem-dense {
+  font-size: 0.875rem;
+  min-height: auto;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+</style><style id="detectElementResize" type="text/css">@keyframes resizeanim { from { opacity: 0; } to { opacity: 0; } } .resize-triggers { animation: 1ms resizeanim; visibility: hidden; opacity: 0; } .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; z-index: -1; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }</style></head>
+    <body style="">
+        <noscript> You need to enable JavaScript to run this app. </noscript>
+        <span hidden="" id="locale">@@LOCALE@@</span>
+        <span hidden="" id="config">@@CONFIG@@</span>
+        <!-- your react app will render here -->
+        <div id="app"><div class="full-screen"><div><div class="app-main"><div><div class="react-grid-layout r-layout" style="height: 630px;"><div class="react-grid-item grid-item cssTransforms" style="width: 1045px; height: 70px; position: absolute; transform: translate(0px, 0px);"><div class="component-wrapper"><div class="HeaderBar-navContainer-2"><div><div class="ButtonAppBar-root-8"><header class="MuiPaper-root-20 MuiPaper-elevation4-26 MuiAppBar-root-11 MuiAppBar-positionStatic-15 HeaderBar-border-radius-container-4 MuiAppBar-colorDefault-17"><div class="MuiToolbar-root-47 MuiToolbar-regular-49 MuiToolbar-gutters-48"><button class="MuiButtonBase-root-60 MuiIconButton-root-51 ButtonAppBar-menuButton-10 MuiIconButton-colorInherit-54" tabindex="0" type="button" aria-label="Menu"><span class="MuiIconButton-label-59"><svg class="MuiSvgIcon-root-63" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg></span><span class="MuiTouchRipple-root-151"></span></button><div class="HeaderBar-appBarContent-5"><div class="HeaderBarContextSelect-wrapper-72"><div><div draggable="false" theme="[object Object]" color="primary" type="elbit_caseClosed" width="25px" class="icon" style="display: flex; user-select: none;"><svg style="width: 25px; height: 25px;" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>case open</title><defs><path d="M10.7586207,10.4 L14.0689655,10.4 L14.0689655,7.2 L10.7586207,7.2 L10.7586207,10.4 Z M9.93103448,9.9892 C9.93103448,10.6576 10.4809655,11.2 11.1835862,11.2 L13.644,11.2 C14.3354483,11.2 14.8965517,10.6684 14.8965517,9.9892 L14.8965517,7.6108 C14.8965517,6.9424 14.3466207,6.4 13.644,6.4 L11.1835862,6.4 C10.4921379,6.4 9.93103448,6.9316 9.93103448,7.6108 L9.93103448,9.9892 Z M14.6813793,1.04426667 L10.2190345,1.04426667 L10.2190345,3.2 L9.10344828,3.2 L9.10344828,1.33333333 C9.10344828,0 10.3768276,0 10.3768276,0 L14.4507586,0 C14.4507586,0 15.7241379,0 15.7241379,1.33333333 L15.7241379,3.2 L14.6813793,3.2 L14.6813793,1.04426667 Z M22.9090909,4.32 L1.09090909,4.32 L1.09090909,8.8 L0,8.8 L0,4.47232 C0,3.2 1.2,3.2 1.2,3.2 L22.8,3.2 C22.8,3.2 24,3.2 24,4.47232 L24,8.8 L22.9090909,8.8 L22.9090909,4.32 Z M15.3010909,10.6244 L22.9712727,10.6244 L22.9712727,19.03072 L1.05818182,19.03072 L1.05818182,10.6244 L8.73272727,10.6244 L8.73272727,9.6 L0,9.6 L0,18.84456 C0,20 1.2,20 1.2,20 L22.8,20 C22.8,20 24,20 24,18.84456 L24,9.6 L15.3010909,9.6 L15.3010909,10.6244 Z" id="path-1"></path></defs><g id="case-open" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="Header-type-icn/Investigation"><g id="c/grey/600" transform="translate(0.000000, 1.600000)"><mask id="mask-2" fill="white"><use xlink:href="#path-1"></use></mask><use id="Mask" fill="#007bb3" xlink:href="#path-1"></use><g id="c/light-blue-copy-3" mask="url(#mask-2)" fill="#007bb3"><g transform="translate(0.000000, -2.400000)" id="Shape"><rect x="0" y="0" width="24" height="25"></rect></g></g></g></g></g></svg></div></div><div class="HeaderBarContextSelect-leftAlign-74 HeaderBarContextSelect-title-73"><h5 class="MuiTypography-root-78 HeaderBarContextSelect-setBold-76 MuiTypography-h5-87 MuiTypography-noWrap-97"><span class="MuiTypography-root-78 MuiTypography-noWrap-97"><div class="TextWithTooltip-paragraph-108 ellipsis-overflow"><span>All Cases</span></div></span></h5><p class="MuiTypography-root-78 HeaderBarContextSelect-textSecondary-75 MuiTypography-body2-79 MuiTypography-colorTextSecondary-104 MuiTypography-noWrap-97"></p></div><div class="HeaderBarContextSelect-leftAlign-74"><div class="ContextMenu-center-121"><span class="icon"><svg class="MuiSvgIcon-root-63 clicked" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation" name="expand_more" aria-haspopup="true"><path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg></span></div></div></div><div class="HeaderBarRoutes-appbarMenu-133"><div class="menu-item default"><a class="link" href="http://localhost:8080/?contextItem={%22name%22:%22All%20Cases%22,%22iconType%22:%22elbit_caseClosed%22,%22Marking%22:%22%22,%22subTitle%22:%22%22,%22itemType%22:%22%22}"><p class="MuiTypography-root-78 default MuiTypography-body1-80">Overview</p></a></div><div class="menu-item default"><a class="link" href="http://localhost:8080/search?contextItem={%22name%22:%22All%20Cases%22,%22iconType%22:%22elbit_caseClosed%22,%22Marking%22:%22%22,%22subTitle%22:%22%22,%22itemType%22:%22%22}"><p class="MuiTypography-root-78 default MuiTypography-body1-80">Search</p></a></div><div class="menu-item default"><a class="link" href="http://localhost:8080/explorer?contextItem={%22name%22:%22All%20Cases%22,%22iconType%22:%22elbit_caseClosed%22,%22Marking%22:%22%22,%22subTitle%22:%22%22,%22itemType%22:%22%22}"><p class="MuiTypography-root-78 default MuiTypography-body1-80">Explorer</p></a></div><div class="menu-item default"><a class="link" href="http://localhost:8080/links?contextItem={%22name%22:%22All%20Cases%22,%22iconType%22:%22elbit_caseClosed%22,%22Marking%22:%22%22,%22subTitle%22:%22%22,%22itemType%22:%22%22}"><p class="MuiTypography-root-78 default MuiTypography-body1-80">Links</p></a></div><div class="menu-item default"><a class="link" href="http://localhost:8080/geo?contextItem={%22name%22:%22All%20Cases%22,%22iconType%22:%22elbit_caseClosed%22,%22Marking%22:%22%22,%22subTitle%22:%22%22,%22itemType%22:%22%22}"><p class="MuiTypography-root-78 default MuiTypography-body1-80">Geo</p></a></div><div class="menu-item default"><a class="link" href="http://localhost:8080/statistics?contextItem={%22name%22:%22All%20Cases%22,%22iconType%22:%22elbit_caseClosed%22,%22Marking%22:%22%22,%22subTitle%22:%22%22,%22itemType%22:%22%22}"><p class="MuiTypography-root-78 default MuiTypography-body1-80">Statistics</p></a></div><div class="menu-item default"><a class="link" href="http://localhost:8080/statistics2?contextItem={%22name%22:%22All%20Cases%22,%22iconType%22:%22elbit_caseClosed%22,%22Marking%22:%22%22,%22subTitle%22:%22%22,%22itemType%22:%22%22}"><p class="MuiTypography-root-78 default MuiTypography-body1-80">Statistics2</p></a></div></div></div><p class="MuiTypography-root-78 Typohraphy-root-77 MuiTypography-body1-80"></p></div></header></div></div><div class="HeaderBar-iconsBar-3"><div><button class="MuiButtonBase-root-60 MuiIconButton-root-51" tabindex="0" type="button"><span class="MuiIconButton-label-59 makeStyles-notification-134"><div draggable="false" theme="[object Object]" type="elbit_notificationBell" width="20" class="icon" style="display: flex; user-select: none;"><!--?xm style="width: 20; height: 23;" l version="1.0" encoding="UTF-8"?--><svg width="20px" height="23px" viewBox="0 0 20 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><desc>Created with Sketch.</desc><defs><path d="M1817.37838,35.5238095 L1817.37838,27.8571429 C1817.37838,23.6930476 1814.31676,20.261119 1810.35135,19.7244524 L1810.35135,18 L1808.22324,18 L1808.22324,19.7189762 C1804.24108,20.2403095 1801.16216,23.681 1801.16216,27.8571429 L1801.16216,35.5238095 L1799,35.5238095 L1799,37.7142857 L1819,37.7142857 L1819,35.5238095 L1817.37838,35.5238095 Z M1811.43243,38.8095238 L1811.43243,41 L1807.10811,41 L1807.10811,38.8095238 L1811.43243,38.8095238 Z M1809.27027,21.8333333 C1812.54865,21.8333333 1815.21622,24.5358333 1815.21622,27.8571429 L1815.21622,35.5238095 L1803.32432,35.5238095 L1803.32432,27.8571429 C1803.32432,24.5358333 1805.99189,21.8333333 1809.27027,21.8333333 Z" id="notificationpath-1"></path></defs><g id="NotificationLibrary" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g id="NotificationDigest---Header/Case" transform="translate(-1799.000000, -18.000000)"><mask id="notificationmask-2" fill="white"><use xlink:href="#notificationpath-1"></use></mask><use id="NotificationMask" fill="#007bb3" xlink:href="#notificationpath-1"></use></g></g></svg></div><span class="makeStyles-amount-135">67</span></span></button></div><div class="badges"><div class="user-nav"><button class="MuiButtonBase-root-60 MuiIconButton-root-51" tabindex="0" type="button" aria-label="User Name"><span class="MuiIconButton-label-59"><svg class="MuiSvgIcon-root-63 avatar-user" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"></path></svg></span></button><span><span class="MuiTypography-root-78 ellipsis_user MuiTypography-caption-81"></span></span></div></div></div></div></div></div><div class="react-grid-item grid-item cssTransforms" style="width: 348px; height: 280px; position: absolute; transform: translate(0px, 70px);"><div class="component-wrapper"><div style="padding: 5px; height: calc(100% - 50px); width: 100%;"><div style="height: 100%; width: 100%; position: relative;"><div><div class="makeStyles-wrapper-137"><div class="makeStyles-infoTitle-144"><p>My Horizontal Bar Chart</p></div><div><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button" aria-label="full screen" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button" aria-label="more" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart" tabindex="0" type="button" aria-label="close"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div></div></div><div style="overflow: visible; height: 0px; width: 0px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 338px; height: 220px;"><svg class="recharts-surface" width="338" height="220" viewBox="0 0 338 220" version="1.1"><defs><clippath id="recharts1-clip"><rect x="80" y="5" height="185" width="228"></rect></clippath></defs><g class="recharts-cartesian-grid"><g class="recharts-cartesian-grid-horizontal"><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="190" x2="308" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="143.75" x2="308" y2="143.75"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="97.5" x2="308" y2="97.5"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="51.25" x2="308" y2="51.25"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="5" x2="308" y2="5"></line></g><g class="recharts-cartesian-grid-vertical"><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="108.5" y1="5" x2="108.5" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="165.5" y1="5" x2="165.5" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="222.5" y1="5" x2="222.5" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="279.5" y1="5" x2="279.5" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="5" x2="80" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="308" y1="5" x2="308" y2="190"></line></g></g><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><line class="recharts-xAxis xAxis" type="category" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="190" x2="308" y2="190"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" type="category" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="108.5" y1="196" x2="108.5" y2="190"></line><text type="category" orientation="bottom" width="228" height="30" x="108.5" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" type="category" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="165.5" y1="196" x2="165.5" y2="190"></line><text type="category" orientation="bottom" width="228" height="30" x="165.5" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" type="category" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="222.5" y1="196" x2="222.5" y2="190"></line><text type="category" orientation="bottom" width="228" height="30" x="222.5" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" type="category" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="279.5" y1="196" x2="279.5" y2="190"></line><text type="category" orientation="bottom" width="228" height="30" x="279.5" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><line class="recharts-yAxis yAxis" type="number" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="5" x2="80" y2="190"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" type="number" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="190" x2="80" y2="190"></line><text type="number" orientation="left" width="60" height="185" x="72" y="190" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" type="number" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="143.75" x2="80" y2="143.75"></line><text type="number" orientation="left" width="60" height="185" x="72" y="143.75" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">600</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" type="number" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="97.5" x2="80" y2="97.5"></line><text type="number" orientation="left" width="60" height="185" x="72" y="97.5" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">1200</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" type="number" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="51.25" x2="80" y2="51.25"></line><text type="number" orientation="left" width="60" height="185" x="72" y="51.25" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">1800</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" type="number" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="5" x2="80" y2="5"></line><text type="number" orientation="left" width="60" height="185" x="72" y="9" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">2400</tspan></text></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path width="22" height="180" name="name1" x="97.1" y="5" cursor="pointer" fill="#8884e2" radius="0" class="recharts-rectangle" d="M 97.1,5 h 22 v 180 h -22 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path width="22" height="165.75" name="name2" x="154.1" y="19.250000000000007" cursor="pointer" fill="#83a6ed" radius="0" class="recharts-rectangle" d="M 154.1,19.250000000000007 h 22 v 165.75 h -22 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path width="22" height="171.75" name="name3" x="211.1" y="13.249999999999991" cursor="pointer" fill="#8dd1e1" radius="0" class="recharts-rectangle" d="M 211.1,13.249999999999991 h 22 v 171.75 h -22 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path width="22" height="150" name="name4" x="268.1" y="34.99999999999999" cursor="pointer" fill="#a4de6c" radius="0" class="recharts-rectangle" d="M 268.1,34.99999999999999 h 22 v 150 h -22 Z"></path></g></g></g></g></svg><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-top" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; transform: translate(118.5px, 133px);"><div class="recharts-default-tooltip" style="margin: 0px; padding: 10px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); white-space: nowrap;"><p class="recharts-tooltip-label" style="margin: 0px;">0</p></div></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 339px; height: 221px;"></div></div><div class="contract-trigger"></div></div></div></div></div></div><div class="react-grid-item grid-item cssTransforms" style="width: 348px; height: 280px; position: absolute; transform: translate(348px, 70px);"><div class="component-wrapper"><div style="padding: 5px; height: calc(100% - 50px); width: 100%;"><div style="height: 100%; width: 100%; position: relative;"><div><div class="makeStyles-wrapper-137"><div class="makeStyles-infoTitle-144"><p>My Pie Chart</p></div><div><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button" aria-label="full screen" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button" aria-label="more" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart" tabindex="0" type="button" aria-label="close"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div></div></div><div style="overflow: visible; height: 0px; width: 0px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 338px; height: 220px;"><svg cx="50%" cy="50%" class="recharts-surface" width="338" height="220" viewBox="0 0 338 220" version="1.1"><defs><clippath id="recharts2-clip"><rect x="5" y="5" height="210" width="328"></rect></clippath></defs><g class="recharts-layer recharts-pie"><g class="recharts-layer"><g class="recharts-layer recharts-pie-sector"><path name="name1" fill="#8884e2" stroke="#fff" cx="169" cy="110" cursor="pointer" class="recharts-sector" d="M 249,110
+    A 80,80,0,
+    0,0,
+    159.14146184822732,30.609766183049686
+  L 169,110 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path name="name2" fill="#8884e2" stroke="#fff" cx="169" cy="110" cursor="pointer" class="recharts-sector" d="M 159.14146184822732,30.609766183049686
+    A 80,80,0,
+    0,0,
+    89.50982116858708,119.01728725005447
+  L 169,110 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path name="name3" fill="#8884e2" stroke="#fff" cx="169" cy="110" cursor="pointer" class="recharts-sector" d="M 89.50982116858708,119.01728725005447
+    A 80,80,0,
+    0,0,
+    181.6541944675443,188.99285640092762
+  L 169,110 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path name="name4" fill="#8884e2" stroke="#fff" cx="169" cy="110" cursor="pointer" class="recharts-sector" d="M 181.6541944675443,188.99285640092762
+    A 80,80,0,
+    0,0,
+    249,110.00000000000001
+  L 169,110 Z"></path></g></g></g></svg><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; transform: translate(209.439px, 143.451px);"><div class="recharts-default-tooltip" style="margin: 0px; padding: 10px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); white-space: nowrap;"><p class="recharts-tooltip-label" style="margin: 0px;"></p></div></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 339px; height: 221px;"></div></div><div class="contract-trigger"></div></div></div></div></div></div><div class="react-grid-item grid-item cssTransforms" style="width: 348px; height: 280px; position: absolute; transform: translate(697px, 70px);"><div class="component-wrapper"><div style="padding: 5px; height: calc(100% - 50px); width: 100%;"><div style="height: 100%; width: 100%; position: relative;"><div><div class="makeStyles-wrapper-137"><div class="makeStyles-infoTitle-144"><p>My Simple Line Chart</p></div><div><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button" aria-label="full screen" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button" aria-label="more" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart" tabindex="0" type="button" aria-label="close"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div></div></div><div style="overflow: visible; height: 0px; width: 0px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 338px; height: 215px;"><svg class="recharts-surface" width="338" height="215" viewBox="0 0 338 215" version="1.1"><defs><clippath id="recharts3-clip"><rect x="80" y="5" height="180" width="228"></rect></clippath></defs><g class="recharts-cartesian-grid"><g class="recharts-cartesian-grid-horizontal"><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="180" offset="[object Object]" x1="80" y1="185" x2="308" y2="185"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="180" offset="[object Object]" x1="80" y1="140" x2="308" y2="140"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="180" offset="[object Object]" x1="80" y1="95" x2="308" y2="95"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="180" offset="[object Object]" x1="80" y1="50" x2="308" y2="50"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="180" offset="[object Object]" x1="80" y1="5" x2="308" y2="5"></line></g><g class="recharts-cartesian-grid-vertical"><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="180" offset="[object Object]" x1="80" y1="5" x2="80" y2="185"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="180" offset="[object Object]" x1="156" y1="5" x2="156" y2="185"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="180" offset="[object Object]" x1="232" y1="5" x2="232" y2="185"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="180" offset="[object Object]" x1="308" y1="5" x2="308" y2="185"></line></g></g><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="185" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="185" x2="308" y2="185"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="185" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="191" x2="80" y2="185"></line><text orientation="bottom" width="228" height="30" type="category" x="80" y="193" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="185" viewBox="[object Object]" stroke="#666" fill="none" x1="156" y1="191" x2="156" y2="185"></line><text orientation="bottom" width="228" height="30" type="category" x="156" y="193" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="185" viewBox="[object Object]" stroke="#666" fill="none" x1="232" y1="191" x2="232" y2="185"></line><text orientation="bottom" width="228" height="30" type="category" x="232" y="193" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="185" viewBox="[object Object]" stroke="#666" fill="none" x1="308" y1="191" x2="308" y2="185"></line><text orientation="bottom" width="228" height="30" type="category" x="308" y="193" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="180" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="5" x2="80" y2="185"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="180" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="185" x2="80" y2="185"></line><text orientation="left" width="60" height="180" type="number" x="72" y="185" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="180" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="140" x2="80" y2="140"></line><text orientation="left" width="60" height="180" type="number" x="72" y="140" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">1000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="180" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="95" x2="80" y2="95"></line><text orientation="left" width="60" height="180" type="number" x="72" y="95" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">2000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="180" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="50" x2="80" y2="50"></line><text orientation="left" width="60" height="180" type="number" x="72" y="50" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">3000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="180" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="5" x2="80" y2="5"></line><text orientation="left" width="60" height="180" type="number" x="72" y="9" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">4000</tspan></text></g></g></g><g class="recharts-layer recharts-line"><path stroke="#8884e2" stroke-width="1" fill="none" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" class="recharts-curve recharts-line-curve" type="monotone" d="M80,5C105.33333333333333,20,130.66666666666666,35,156,50C181.33333333333334,65,206.66666666666666,95,232,95C257.3333333333333,95,282.6666666666667,77.45,308,59.90000000000001"></path><g class="recharts-layer recharts-line-dots"><circle r="3" stroke="#8884e2" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="80" cy="5" class="recharts-dot recharts-line-dot"></circle><circle r="3" stroke="#8884e2" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="156" cy="50" class="recharts-dot recharts-line-dot"></circle><circle r="3" stroke="#8884e2" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="232" cy="95" class="recharts-dot recharts-line-dot"></circle><circle r="3" stroke="#8884e2" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="308" cy="59.90000000000001" class="recharts-dot recharts-line-dot"></circle></g></g><g class="recharts-layer recharts-line"><path stroke="#83a6ed" stroke-width="1" fill="none" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" class="recharts-curve recharts-line-curve" type="monotone" d="M80,77C105.33333333333333,81.275,130.66666666666666,85.55000000000001,156,85.55000000000001C181.33333333333334,85.55000000000001,206.66666666666666,81.94999999999999,232,81.94999999999999C257.3333333333333,81.94999999999999,282.6666666666667,88.475,308,95"></path><g class="recharts-layer recharts-line-dots"><circle r="3" stroke="#83a6ed" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="80" cy="77" class="recharts-dot recharts-line-dot"></circle><circle r="3" stroke="#83a6ed" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="156" cy="85.55000000000001" class="recharts-dot recharts-line-dot"></circle><circle r="3" stroke="#83a6ed" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="232" cy="81.94999999999999" class="recharts-dot recharts-line-dot"></circle><circle r="3" stroke="#83a6ed" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="308" cy="95" class="recharts-dot recharts-line-dot"></circle></g></g><g class="recharts-layer recharts-line"><path stroke="#8dd1e1" stroke-width="1" fill="none" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" class="recharts-curve recharts-line-curve" type="monotone" d="M80,131C105.33333333333333,129.5,130.66666666666666,128,156,126.50000000000001C181.33333333333334,125.00000000000001,206.66666666666666,123.5,232,122C257.3333333333333,120.5,282.6666666666667,119,308,117.5"></path><g class="recharts-layer recharts-line-dots"><circle r="3" stroke="#8dd1e1" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="80" cy="131" class="recharts-dot recharts-line-dot"></circle><circle r="3" stroke="#8dd1e1" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="156" cy="126.50000000000001" class="recharts-dot recharts-line-dot"></circle><circle r="3" stroke="#8dd1e1" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="232" cy="122" class="recharts-dot recharts-line-dot"></circle><circle r="3" stroke="#8dd1e1" type="monotone" stroke-width="1" fill="#fff" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="180" cx="308" cy="117.5" class="recharts-dot recharts-line-dot"></circle></g></g></svg><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-left recharts-tooltip-wrapper-top" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; transform: translate(332.349px, 137px);"><div class="recharts-default-tooltip" style="margin: 0px; padding: 10px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); white-space: nowrap;"><p class="recharts-tooltip-label" style="margin: 0px;">2</p></div></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 339px; height: 216px;"></div></div><div class="contract-trigger"></div></div></div></div></div></div><div class="react-grid-item grid-item cssTransforms" style="width: 348px; height: 280px; position: absolute; transform: translate(0px, 350px);"><div class="component-wrapper"><div style="padding: 5px; height: calc(100% - 50px); width: 100%;"><div style="height: 100%; width: 100%; position: relative;"><div><div class="makeStyles-wrapper-137"><div class="makeStyles-infoTitle-144"><p>My Vertical Bar Chart</p></div><div><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button" aria-label="full screen" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button" aria-label="more" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart" tabindex="0" type="button" aria-label="close"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div></div></div><div style="overflow: visible; height: 0px; width: 0px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 338px; height: 220px;"><svg class="recharts-surface" width="338" height="220" viewBox="0 0 338 220" version="1.1"><defs><clippath id="recharts4-clip"><rect x="80" y="5" height="185" width="228"></rect></clippath></defs><g class="recharts-cartesian-grid"><g class="recharts-cartesian-grid-horizontal"><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="28.125" x2="308" y2="28.125"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="74.375" x2="308" y2="74.375"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="120.625" x2="308" y2="120.625"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="166.875" x2="308" y2="166.875"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="5" x2="308" y2="5"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="190" x2="308" y2="190"></line></g><g class="recharts-cartesian-grid-vertical"><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="5" x2="80" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="137" y1="5" x2="137" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="194" y1="5" x2="194" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="251" y1="5" x2="251" y2="190"></line><line stroke-dasharray="4 4" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="308" y1="5" x2="308" y2="190"></line></g></g><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><line class="recharts-xAxis xAxis" type="number" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="190" x2="308" y2="190"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" type="number" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="196" x2="80" y2="190"></line><text type="number" orientation="bottom" width="228" height="30" x="80" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" type="number" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="137" y1="196" x2="137" y2="190"></line><text type="number" orientation="bottom" width="228" height="30" x="137" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" type="number" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="194" y1="196" x2="194" y2="190"></line><text type="number" orientation="bottom" width="228" height="30" x="194" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" type="number" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="251" y1="196" x2="251" y2="190"></line><text type="number" orientation="bottom" width="228" height="30" x="251" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" type="number" orientation="bottom" width="228" height="30" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="308" y1="196" x2="308" y2="190"></line><text type="number" orientation="bottom" width="228" height="30" x="308" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><line class="recharts-yAxis yAxis" type="category" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="5" x2="80" y2="190"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" type="category" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="28.125" x2="80" y2="28.125"></line><text type="category" orientation="left" width="60" height="185" x="72" y="28.125" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">name1</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" type="category" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="74.375" x2="80" y2="74.375"></line><text type="category" orientation="left" width="60" height="185" x="72" y="74.375" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">name2</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" type="category" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="120.625" x2="80" y2="120.625"></line><text type="category" orientation="left" width="60" height="185" x="72" y="120.625" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">name3</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" type="category" orientation="left" width="60" height="185" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="166.875" x2="80" y2="166.875"></line><text type="category" orientation="left" width="60" height="185" x="72" y="166.875" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">name4</tspan></text></g></g></g><g class="recharts-layer recharts-bar"><g class="recharts-layer recharts-bar-rectangles"><g class="recharts-layer"><g class="recharts-layer recharts-bar-rectangle"><path width="228" height="18" name="name1" x="80" y="18.5" cursor="pointer" fill="#8884e2" radius="0" class="recharts-rectangle" d="M 80,18.5 h 228 v 18 h -228 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path width="209.95" height="18" name="name2" x="80" y="63.5" cursor="pointer" fill="#8884e2" radius="0" class="recharts-rectangle" d="M 80,63.5 h 209.95 v 18 h -209.95 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path width="217.55" height="18" name="name3" x="80" y="108.5" cursor="pointer" fill="#8884e2" radius="0" class="recharts-rectangle" d="M 80,108.5 h 217.55 v 18 h -217.55 Z"></path></g><g class="recharts-layer recharts-bar-rectangle"><path width="190" height="18" name="name4" x="80" y="153.5" cursor="pointer" fill="#8884e2" radius="0" class="recharts-rectangle" d="M 80,153.5 h 190 v 18 h -190 Z"></path></g></g></g></g></svg><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-left recharts-tooltip-wrapper-bottom" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; transform: translate(211.984px, 82.5px);"><div class="recharts-default-tooltip" style="margin: 0px; padding: 10px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); white-space: nowrap;"><p class="recharts-tooltip-label" style="margin: 0px;">name2</p></div></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 339px; height: 221px;"></div></div><div class="contract-trigger"></div></div></div></div></div></div><div class="react-grid-item grid-item cssTransforms" style="width: 348px; height: 280px; position: absolute; transform: translate(348px, 350px);"><div class="component-wrapper"><div style="padding: 5px; height: calc(100% - 50px); width: 100%;"><div style="height: 100%; width: 100%; position: relative;"><div><div class="makeStyles-wrapper-137"><div class="makeStyles-infoTitle-144"><p>My Pie Chart</p></div><div><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button" aria-label="full screen" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button" aria-label="more" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart" tabindex="0" type="button" aria-label="close"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div></div></div><div style="overflow: visible; height: 0px; width: 0px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 338px; height: 220px;"><svg cx="50%" cy="50%" class="recharts-surface" width="338" height="220" viewBox="0 0 338 220" version="1.1"><defs><clippath id="recharts5-clip"><rect x="5" y="5" height="210" width="328"></rect></clippath></defs><g class="recharts-layer recharts-pie"><g class="recharts-layer"><g class="recharts-layer recharts-pie-sector"><path name="name1" fill="#8884e2" stroke="#fff" cx="169" cy="110" cursor="pointer" class="recharts-sector" d="M 249,110
+    A 80,80,0,
+    0,0,
+    159.14146184822732,30.609766183049686
+  L 169,110 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path name="name2" fill="#8884e2" stroke="#fff" cx="169" cy="110" cursor="pointer" class="recharts-sector" d="M 159.14146184822732,30.609766183049686
+    A 80,80,0,
+    0,0,
+    89.50982116858708,119.01728725005447
+  L 169,110 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path name="name3" fill="#8884e2" stroke="#fff" cx="169" cy="110" cursor="pointer" class="recharts-sector" d="M 89.50982116858708,119.01728725005447
+    A 80,80,0,
+    0,0,
+    181.6541944675443,188.99285640092762
+  L 169,110 Z"></path></g><g class="recharts-layer recharts-pie-sector"><path name="name4" fill="#8884e2" stroke="#fff" cx="169" cy="110" cursor="pointer" class="recharts-sector" d="M 181.6541944675443,188.99285640092762
+    A 80,80,0,
+    0,0,
+    249,110.00000000000001
+  L 169,110 Z"></path></g></g></g></svg><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; transform: translate(154.809px, 149.356px);"><div class="recharts-default-tooltip" style="margin: 0px; padding: 10px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); white-space: nowrap;"><p class="recharts-tooltip-label" style="margin: 0px;"></p></div></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 339px; height: 221px;"></div></div><div class="contract-trigger"></div></div></div></div></div></div><div class="react-grid-item grid-item cssTransforms" style="width: 348px; height: 280px; position: absolute; transform: translate(697px, 350px);"><div class="component-wrapper"><div style="padding: 5px; height: calc(100% - 50px); width: 100%;"><div style="height: 100%; width: 100%; position: relative;"><div><div class="makeStyles-wrapper-137"><div class="makeStyles-infoTitle-144"><p>My Simple Line Chart</p></div><div><button class="MuiButtonBase-root MuiIconButton-root" tabindex="0" type="button" aria-label="full screen" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit" tabindex="0" type="button" aria-label="more" aria-controls="long-menu" aria-haspopup="true"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div><div><button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart" tabindex="0" type="button" aria-label="close"><span class="MuiIconButton-label"><svg class="MuiSvgIcon-root" focusable="false" viewBox="0 0 24 24" aria-hidden="true" role="presentation"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></span><span class="MuiTouchRipple-root"></span></button></div></div></div><div style="overflow: visible; height: 0px; width: 0px;"><div class="recharts-wrapper" style="position: relative; cursor: default; width: 338px; height: 220px;"><svg class="recharts-surface" width="338" height="220" viewBox="0 0 338 220" version="1.1"><defs><clippath id="recharts6-clip"><rect x="80" y="5" height="185" width="228"></rect></clippath></defs><g class="recharts-cartesian-grid"><g class="recharts-cartesian-grid-horizontal"><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="190" x2="308" y2="190"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="143.75" x2="308" y2="143.75"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="97.5" x2="308" y2="97.5"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="51.25" x2="308" y2="51.25"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="5" x2="308" y2="5"></line></g><g class="recharts-cartesian-grid-vertical"><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="80" y1="5" x2="80" y2="190"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="156" y1="5" x2="156" y2="190"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="232" y1="5" x2="232" y2="190"></line><line stroke-dasharray="3 3" stroke="#ccc" fill="none" x="80" y="5" width="228" height="185" offset="[object Object]" x1="308" y1="5" x2="308" y2="190"></line></g></g><g class="recharts-layer recharts-cartesian-axis recharts-xAxis xAxis"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="190" x2="308" y2="190"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="196" x2="80" y2="190"></line><text orientation="bottom" width="228" height="30" type="category" x="80" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="156" y1="196" x2="156" y2="190"></line><text orientation="bottom" width="228" height="30" type="category" x="156" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="232" y1="196" x2="232" y2="190"></line><text orientation="bottom" width="228" height="30" type="category" x="232" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-xAxis xAxis" orientation="bottom" width="228" height="30" type="category" x="80" y="190" viewBox="[object Object]" stroke="#666" fill="none" x1="308" y1="196" x2="308" y2="190"></line><text orientation="bottom" width="228" height="30" type="category" x="308" y="198" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="middle"></text></g></g></g><g class="recharts-layer recharts-cartesian-axis recharts-yAxis yAxis"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="185" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="80" y1="5" x2="80" y2="190"></line><g class="recharts-cartesian-axis-ticks"><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="185" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="190" x2="80" y2="190"></line><text orientation="left" width="60" height="185" type="number" x="72" y="190" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">0</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="185" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="143.75" x2="80" y2="143.75"></line><text orientation="left" width="60" height="185" type="number" x="72" y="143.75" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">1000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="185" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="97.5" x2="80" y2="97.5"></line><text orientation="left" width="60" height="185" type="number" x="72" y="97.5" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">2000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="185" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="51.25" x2="80" y2="51.25"></line><text orientation="left" width="60" height="185" type="number" x="72" y="51.25" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">3000</tspan></text></g><g class="recharts-layer recharts-cartesian-axis-tick"><line class="recharts-yAxis yAxis" orientation="left" width="60" height="185" type="number" x="20" y="5" viewBox="[object Object]" stroke="#666" fill="none" x1="74" y1="5" x2="80" y2="5"></line><text orientation="left" width="60" height="185" type="number" x="72" y="9" viewBox="[object Object]" stroke="none" fill="#666" class="recharts-text recharts-cartesian-axis-tick-value" text-anchor="end"><tspan x="72" dy="0.355em">4000</tspan></text></g></g></g><g class="recharts-layer recharts-line"><path stroke="#8884e2" stroke-width="1" fill="none" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="185" class="recharts-curve recharts-line-curve" type="monotone" d="M80,5C105.33333333333333,20,130.66666666666666,35,156,50C181.33333333333334,65,206.66666666666666,95,232,95C257.3333333333333,95,282.6666666666667,77.45,308,59.90000000000001"></path></g><g class="recharts-layer recharts-line"><path stroke="#83a6ed" stroke-width="1" fill="none" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="185" class="recharts-curve recharts-line-curve" type="monotone" d="M80,77C105.33333333333333,81.275,130.66666666666666,85.55000000000001,156,85.55000000000001C181.33333333333334,85.55000000000001,206.66666666666666,81.94999999999999,232,81.94999999999999C257.3333333333333,81.94999999999999,282.6666666666667,88.475,308,95"></path></g><g class="recharts-layer recharts-line"><path stroke="#8dd1e1" stroke-width="1" fill="none" points="[object Object],[object Object],[object Object],[object Object]" width="228" height="185" class="recharts-curve recharts-line-curve" type="monotone" d="M80,131C105.33333333333333,129.5,130.66666666666666,128,156,126.50000000000001C181.33333333333334,125.00000000000001,206.66666666666666,123.5,232,122C257.3333333333333,120.5,282.6666666666667,119,308,117.5"></path></g></svg><div class="recharts-tooltip-wrapper recharts-tooltip-wrapper-right recharts-tooltip-wrapper-bottom" style="pointer-events: none; visibility: hidden; position: absolute; top: 0px; transform: translate(242px, 59px);"><div class="recharts-default-tooltip" style="margin: 0px; padding: 10px; background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); white-space: nowrap;"><p class="recharts-tooltip-label" style="margin: 0px;">2</p></div></div></div></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 339px; height: 221px;"></div></div><div class="contract-trigger"></div></div></div></div></div></div></div></div></div></div></div></div>
+    <script type="text/javascript" src="./Digest_files/bundle.js"></script><span id="recharts_measurement_span" style="position: absolute; top: -20000px; left: 0px; padding: 0px; margin: 0px; border: none; white-space: pre;">name1</span><div role="presentation" class="MuiPopover-root" id="long-menu" aria-hidden="true" style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"><div tabindex="0" data-test="sentinelStart"></div><div class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded" tabindex="-1" style="opacity: 0; transform: scale(0.75, 0.5625); visibility: hidden; max-height: 216px; width: 200px;"><ul class="MuiList-root MuiMenu-list MuiList-padding" role="menu" tabindex="-1"><li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false">Export to png file<span class="MuiTouchRipple-root"></span></li></ul></div><div tabindex="0" data-test="sentinelEnd"></div></div><div role="presentation" class="MuiPopover-root" id="long-menu" aria-hidden="true" style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"><div tabindex="0" data-test="sentinelStart"></div><div class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded" tabindex="-1" style="opacity: 0; transform: scale(0.75, 0.5625); visibility: hidden; max-height: 216px; width: 200px;"><ul class="MuiList-root MuiMenu-list MuiList-padding" role="menu" tabindex="-1"><li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false">Export to png file<span class="MuiTouchRipple-root"></span></li></ul></div><div tabindex="0" data-test="sentinelEnd"></div></div><div role="presentation" class="MuiPopover-root" id="long-menu" aria-hidden="true" style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"><div tabindex="0" data-test="sentinelStart"></div><div class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded" tabindex="-1" style="opacity: 0; transform: scale(0.75, 0.5625); visibility: hidden; max-height: 216px; width: 200px;"><ul class="MuiList-root MuiMenu-list MuiList-padding" role="menu" tabindex="-1"><li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false">Export to png file<span class="MuiTouchRipple-root"></span></li></ul></div><div tabindex="0" data-test="sentinelEnd"></div></div><div role="presentation" class="MuiPopover-root" id="long-menu" aria-hidden="true" style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"><div tabindex="0" data-test="sentinelStart"></div><div class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded" tabindex="-1" style="opacity: 0; transform: scale(0.75, 0.5625); visibility: hidden; max-height: 216px; width: 200px;"><ul class="MuiList-root MuiMenu-list MuiList-padding" role="menu" tabindex="-1"><li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false">Export to png file<span class="MuiTouchRipple-root"></span></li></ul></div><div tabindex="0" data-test="sentinelEnd"></div></div><div role="presentation" class="MuiPopover-root" id="long-menu" style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"><div tabindex="0" data-test="sentinelStart"></div><div class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded" tabindex="-1" style="opacity: 0; transform: scale(0.75, 0.5625); max-height: 216px; width: 200px; transition: opacity 207ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 138ms cubic-bezier(0.4, 0, 0.2, 1) 69ms; top: 207px; left: 1018px; transform-origin: 0px 26px; visibility: hidden;"><ul class="MuiList-root MuiMenu-list MuiList-padding" role="menu" tabindex="-1"><li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false">Export to png file<span class="MuiTouchRipple-root"></span></li></ul></div><div tabindex="0" data-test="sentinelEnd"></div></div><div role="presentation" class="MuiPopover-root" id="long-menu" aria-hidden="true" style="position: fixed; z-index: 1300; right: 0px; bottom: 0px; top: 0px; left: 0px; visibility: hidden;"><div tabindex="0" data-test="sentinelStart"></div><div class="MuiPaper-root MuiMenu-paper MuiPopover-paper MuiPaper-elevation8 MuiPaper-rounded" tabindex="-1" style="opacity: 0; transform: scale(0.75, 0.5625); visibility: hidden; max-height: 216px; width: 200px;"><ul class="MuiList-root MuiMenu-list MuiList-padding" role="menu" tabindex="-1"><li class="MuiButtonBase-root MuiListItem-root MuiMenuItem-root MuiMenuItem-gutters MuiListItem-gutters MuiListItem-button" tabindex="0" role="menuitem" aria-disabled="false">Export to png file<span class="MuiTouchRipple-root"></span></li></ul></div><div tabindex="0" data-test="sentinelEnd"></div></div>
+
+</body></html>
