@@ -20,7 +20,7 @@ export default class CheckersComponent extends React.Component {
 
     constructor() {
         super();
-        this.onDrop = this.onDrop.bind(this);
+        // this.onDrop = this.onDrop.bind(this);
         this.update = this.update.bind(this);
         const user = "Will";
         socketService.connect(user);
@@ -58,117 +58,118 @@ export default class CheckersComponent extends React.Component {
         });
     }
 
-    onDragStart(draggedChecker, event) {
-        event.dataTransfer.setData(
-            "draggedChecker",
-            JSON.stringify(draggedChecker)
-        );
-    }
+    // onDragStart(draggedChecker, event) {
+    //     event.dataTransfer.setData(
+    //         "draggedChecker",
+    //         JSON.stringify(draggedChecker)
+    //     );
+    // }
 
-    onDrop(event) {
-        let draggedChecker = JSON.parse(
-            event.dataTransfer.getData("draggedChecker")
-        );
-        let currCellIndex = event.target.getAttribute("tag")
-            ? parseInt(event.target.getAttribute("tag"))
-            : null;
-        let currCellRow = event.target.getAttribute("row")
-            ? parseInt(event.target.getAttribute("row"))
-            : null;
-        let currCellColumn = event.target.getAttribute("row")
-            ? parseInt(event.target.getAttribute("column"))
-            : null;
+    // onDrop(event) {
+    //     alert('drop');
+    //     let draggedChecker = JSON.parse(
+    //         event.dataTransfer.getData("draggedChecker")
+    //     );
+    //     let currCellIndex = event.target.getAttribute("tag")
+    //         ? parseInt(event.target.getAttribute("tag"))
+    //         : null;
+    //     let currCellRow = event.target.getAttribute("row")
+    //         ? parseInt(event.target.getAttribute("row"))
+    //         : null;
+    //     let currCellColumn = event.target.getAttribute("row")
+    //         ? parseInt(event.target.getAttribute("column"))
+    //         : null;
 
-        if (
-            draggedChecker &&
-            draggedChecker.checkerColor === this.activeTurn &&
-            currCellIndex !== null &&
-            currCellColumn !== null &&
-            currCellRow !== null
-        ) {
-            const result = this.checkMove(
-                draggedChecker,
-                this.board[currCellRow][currCellColumn]
-            );
-            if (result.status === "pass") {
-                this.checkers.delete(draggedChecker.index);
-                this.checkers.set(currCellIndex, {
-                    checkerColor: draggedChecker.checkerColor,
-                    checkerType: result.isKing ? "king" : "checker"
-                });
+    //     if (
+    //         draggedChecker &&
+    //         draggedChecker.checkerColor === this.activeTurn &&
+    //         currCellIndex !== null &&
+    //         currCellColumn !== null &&
+    //         currCellRow !== null
+    //     ) {
+    //         const result = this.checkMove(
+    //             draggedChecker,
+    //             this.board[currCellRow][currCellColumn]
+    //         );
+    //         if (result.status === "pass") {
+    //             this.checkers.delete(draggedChecker.index);
+    //             this.checkers.set(currCellIndex, {
+    //                 checkerColor: draggedChecker.checkerColor,
+    //                 checkerType: result.isKing ? "king" : "checker"
+    //             });
 
-                this.setState({ checkers: this.checkers });
-                this.activeTurn =
-                    this.activeTurn === "white" ? "black" : "white";
-                result.eatenIndex && this.checkers.delete(result.eatenIndex);
-            }
-        }
-    }
+    //             this.setState({ checkers: this.checkers });
+    //             this.activeTurn =
+    //                 this.activeTurn === "white" ? "black" : "white";
+    //             result.eatenIndex && this.checkers.delete(result.eatenIndex);
+    //         }
+    //     }
+    // }
 
-    checkMove(draggedChecker, targetCell) {
-        let ret = { status: "pass" };
-        if (targetCell.color === "light") {
-            ret = { status: "fail" };
-        } else {
-            let diffCols = Math.abs(draggedChecker.column - targetCell.column);
-            let diffRows = Math.abs(draggedChecker.row - targetCell.row);
-            const movingBackward =
-                draggedChecker.checkerColor === "black"
-                    ? draggedChecker.row > targetCell.row
-                    : draggedChecker.row < targetCell.row;
+    // checkMove(draggedChecker, targetCell) {
+    //     let ret = { status: "pass" };
+    //     if (targetCell.color === "light") {
+    //         ret = { status: "fail" };
+    //     } else {
+    //         let diffCols = Math.abs(draggedChecker.column - targetCell.column);
+    //         let diffRows = Math.abs(draggedChecker.row - targetCell.row);
+    //         const movingBackward =
+    //             draggedChecker.checkerColor === "black"
+    //                 ? draggedChecker.row > targetCell.row
+    //                 : draggedChecker.row < targetCell.row;
 
-            const isEnemyAt = midIndex => {
-                return draggedChecker.checkerColor === "black"
-                    ? this.checkers.get(midIndex)?.checkerColor === "white"
-                    : this.checkers.get(midIndex)?.checkerColor === "black";
-            };
+    //         const isEnemyAt = midIndex => {
+    //             return draggedChecker.checkerColor === "black"
+    //                 ? this.checkers.get(midIndex)?.checkerColor === "white"
+    //                 : this.checkers.get(midIndex)?.checkerColor === "black";
+    //         };
 
-            const isKingColumn =
-                draggedChecker.checkerColor === "black"
-                    ? targetCell.row === BOARD_SIZE - 1
-                    : targetCell.row === 0;
+    //         const isKingColumn =
+    //             draggedChecker.checkerColor === "black"
+    //                 ? targetCell.row === BOARD_SIZE - 1
+    //                 : targetCell.row === 0;
 
-            if (
-                (draggedChecker.checkerType === "checker" && movingBackward) ||
-                (draggedChecker.checkerType === "checker" && diffCols > 2) ||
-                diffCols !== diffRows
-            ) {
-                ret = { status: "fail" };
-            } else {
-                if (diffCols === 2) {
-                    const midColumn =
-                        draggedChecker.column > targetCell.column
-                            ? draggedChecker.column - 1
-                            : targetCell.column - 1;
+    //         if (
+    //             (draggedChecker.checkerType === "checker" && movingBackward) ||
+    //             (draggedChecker.checkerType === "checker" && diffCols > 2) ||
+    //             diffCols !== diffRows
+    //         ) {
+    //             ret = { status: "fail" };
+    //         } else {
+    //             if (diffCols === 2) {
+    //                 const midColumn =
+    //                     draggedChecker.column > targetCell.column
+    //                         ? draggedChecker.column - 1
+    //                         : targetCell.column - 1;
 
-                    const midRow =
-                        draggedChecker.row > targetCell.row
-                            ? draggedChecker.row - 1
-                            : targetCell.row - 1;
-                    const midIndex = midRow * BOARD_SIZE + midColumn;
-                    if (isEnemyAt(midIndex)) {
-                        ret = { status: "pass", eatenIndex: midIndex };
-                    } else {
-                        ret = { status: "fail" };
-                    }
-                } else {
-                    if (this.checkers[targetCell.index]) {
-                        ret = { status: "fail" };
-                    }
-                }
-                if (movingBackward) {
-                    //Find the crossed checkers
-                }
-                if (
-                    draggedChecker.checkerType === "king" ||
-                    (ret.status === "pass" && isKingColumn)
-                ) {
-                    ret.isKing = true;
-                }
-            }
-        }
-        return ret;
-    }
+    //                 const midRow =
+    //                     draggedChecker.row > targetCell.row
+    //                         ? draggedChecker.row - 1
+    //                         : targetCell.row - 1;
+    //                 const midIndex = midRow * BOARD_SIZE + midColumn;
+    //                 if (isEnemyAt(midIndex)) {
+    //                     ret = { status: "pass", eatenIndex: midIndex };
+    //                 } else {
+    //                     ret = { status: "fail" };
+    //                 }
+    //             } else {
+    //                 if (this.checkers[targetCell.index]) {
+    //                     ret = { status: "fail" };
+    //                 }
+    //             }
+    //             if (movingBackward) {
+    //                 //Find the crossed checkers
+    //             }
+    //             if (
+    //                 draggedChecker.checkerType === "king" ||
+    //                 (ret.status === "pass" && isKingColumn)
+    //             ) {
+    //                 ret.isKing = true;
+    //             }
+    //         }
+    //     }
+    //     return ret;
+    // }
 
     update(checkers, activeTurn) {
         this.checkers = checkers;
@@ -187,7 +188,7 @@ export default class CheckersComponent extends React.Component {
                         boardSize={BOARD_SIZE}
                         board={this.board}
                         checkers={this.checkers}
-                        onDragStart={this.onDragStart}
+                        // onDragStart={this.onDragStart}
                         callback={this.update}
                         currentPlayer={this.currentPlayer}
                         // onDrop={this.onDrop}
