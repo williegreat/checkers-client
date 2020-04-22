@@ -7,18 +7,21 @@ const Board = ({
     boardSize,
     board,
     checkers,
-    onDragStart,
-    callback,
+    callback: redrawBoard,
     currentPlayer
 }) => {
     useEffect(() => {
         initBoard();
     }, []);
 
-    const onDrop = event => {
-        let draggedChecker = JSON.parse(
-            event.dataTransfer.getData("draggedChecker")
+    const onDragStart = (draggedChecker, event) => {
+        event.dataTransfer.setData(
+            "draggedChecker",
+            JSON.stringify(draggedChecker)
         );
+    };
+
+    const getPosition = (event) => {
         let currCellIndex = event.target.getAttribute("tag")
             ? parseInt(event.target.getAttribute("tag"))
             : null;
@@ -29,42 +32,78 @@ const Board = ({
             ? parseInt(event.target.getAttribute("column"))
             : null;
 
-        if (
-            draggedChecker &&
-            draggedChecker.checkerColor === activeTurn &&
-            currCellIndex !== null &&
-            currCellColumn !== null &&
-            currCellRow !== null
-        ) {
-            let result = {};
-            try {
-                result = checkMove(
-                    draggedChecker,
-                    board[currCellRow][currCellColumn]
-                );
-                if (result.status === "pass") {
-                    checkers.delete(draggedChecker.index);
-                    checkers.set(currCellIndex, {
-                        checkerColor: draggedChecker.checkerColor,
-                        checkerType: result.isKing ? "king" : "checker"
-                    });
+        return { currCellIndex, currCellRow, currCellColumn };
+    }
 
-                    activeTurn = activeTurn === "white" ? "black" : "white";
-                    callback(checkers, activeTurn);
-                    result.eatenIndex && checkers.delete(result.eatenIndex);
-                }
-            } catch (err) {
-                console.log(err);
-            }
+    const assertPosition = (position) => {
+        const { currCellColumn, currCellIndex, currCellRow } = position;
+        if (!currCellIndex || !currCellRow || !currCellColumn) {
+            throw new Error("Invalid position");
         }
     };
+
+    const assertDraggedChecker = (draggedChecker) => {
+        if (!draggedChecker) {
+            throw new Error("No checker is selected to drag");
+        }
+    }
+
+    const assertInvalidTurn = (draggedChecker) => {
+        if (draggedChecker.checkerColor !== activeTurn) {
+            throw new Error("Tried to move checker not in turn");
+        }
+    }
+
+    const onDrop = event => {
+        try {
+            let draggedChecker = JSON.parse(
+                event.dataTransfer.getData("draggedChecker")
+            );
+            assertDraggedChecker(draggedChecker);
+            const position = getPosition(event);
+
+            assertPosition(position);
+            const { currCellColumn, currCellIndex, currCellRow } = position;
+
+            let moveResult = {};
+
+            moveResult = checkMove(
+                draggedChecker,
+                board[currCellRow][currCellColumn]
+            );
+
+            console.debug(`${draggedChecker.checkerColor} : 
+                [${draggedChecker.row},${draggedChecker.column}] => [${currCellRow},${currCellColumn}]`);
+
+            makeMove(draggedChecker, currCellIndex, moveResult);
+            flipTurn();
+            redrawBoard(checkers, activeTurn);
+
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
+    const makeMove = (draggedChecker, currCellIndex, moveResult) => {
+        checkers.delete(draggedChecker.index);
+        checkers.set(currCellIndex, {
+            checkerColor: draggedChecker.checkerColor,
+            checkerType: moveResult.isKing ? "king" : "checker"
+        });
+        moveResult.eatenIndex && checkers.delete(moveResult.eatenIndex);
+    }
+
+    const flipTurn = () => {
+        activeTurn = activeTurn === "white" ? "black" : "white";
+        console.debug(`Turn is flipped. New turn is : ${activeTurn}`);
+    }
 
     const isMovingBackward = (draggedChecker, targetCell) => {
         const movingBackward =
             (draggedChecker.checkerColor === "black" &&
                 currentPlayer === "white") ||
-            (draggedChecker.checkerColor === "white" &&
-                currentPlayer === "black")
+                (draggedChecker.checkerColor === "white" &&
+                    currentPlayer === "black")
                 ? draggedChecker.row > targetCell.row
                 : draggedChecker.row < targetCell.row;
         return movingBackward;
@@ -97,7 +136,7 @@ const Board = ({
         }
     };
 
-    const assertIllegalCell = () => {};
+    const assertIllegalCell = () => { };
 
     const getCellDiff = (draggedChecker, targetCell) => {
         let diffCols = Math.abs(draggedChecker.column - targetCell.column);
@@ -180,11 +219,27 @@ const Board = ({
         return ret;
     };
 
+    const assertCheckerMovingBackward = (draggedChecker, targetCell) => {
+        const movingBackward = isMovingBackward(draggedChecker, targetCell);
+        if (draggedChecker.checkerType === "checker" && movingBackward) {
+            throw new Error("Attempt to move checker backward");
+        }
+    }
+
+    const assertCheckerIncorrectPositionMove = (draggedChecker, targetCell, diffRows, diffCols) => {
+
+        if ((draggedChecker.checkerType === "checker") && diffCols >= 2 ||
+            diffCols !== diffRows) {
+            throw new Error("Attempt to move checker incorrect");
+        }
+    }
+
     const checkMove = (draggedChecker, targetCell) => {
         let ret = { status: "pass" };
 
-        assertIllegalCellColor(targetCell);
         assertIllegalCell(targetCell);
+        assertInvalidTurn(draggedChecker);
+        assertIllegalCellColor(targetCell);
 
         let diffCols = Math.abs(draggedChecker.column - targetCell.column);
         let diffRows = Math.abs(draggedChecker.row - targetCell.row);
@@ -192,44 +247,40 @@ const Board = ({
         const movingBackward = isMovingBackward(draggedChecker, targetCell);
         const isKingColumn = hasBecameKing(draggedChecker, targetCell);
 
-        if (
-            (draggedChecker.checkerType === "checker" && movingBackward) ||
-            (draggedChecker.checkerType === "checker" && diffCols > 2) ||
-            diffCols !== diffRows
-        ) {
-            ret = { status: "fail" };
-        } else {
-            if (diffCols === 2) {
-                const midColumn =
-                    draggedChecker.column > targetCell.column
-                        ? draggedChecker.column - 1
-                        : targetCell.column - 1;
+        assertCheckerMovingBackward(draggedChecker, targetCell);
+        assertCheckerIncorrectPositionMove(draggedChecker, targetCell, diffRows, diffCols);
 
-                const midRow =
-                    draggedChecker.row > targetCell.row
-                        ? draggedChecker.row - 1
-                        : targetCell.row - 1;
-                const midIndex = midRow * boardSize + midColumn;
-                if (isEnemyAt(draggedChecker, midIndex)) {
-                    ret = { status: "pass", eatenIndex: midIndex };
-                } else {
-                    ret = { status: "fail" };
-                }
+        if (diffCols === 2) {
+            const midColumn =
+                draggedChecker.column > targetCell.column
+                    ? draggedChecker.column - 1
+                    : targetCell.column - 1;
+
+            const midRow =
+                draggedChecker.row > targetCell.row
+                    ? draggedChecker.row - 1
+                    : targetCell.row - 1;
+            const midIndex = midRow * boardSize + midColumn;
+            if (isEnemyAt(draggedChecker, midIndex)) {
+                ret = { status: "pass", eatenIndex: midIndex };
             } else {
-                if (checkers[targetCell.index]) {
-                    ret = { status: "fail" };
-                }
+                ret = { status: "fail" };
             }
-            if (movingBackward) {
-                //Find the crossed checkers
-            }
-            if (
-                draggedChecker.checkerType === "king" ||
-                (ret.status === "pass" && isKingColumn)
-            ) {
-                ret.isKing = true;
+        } else {
+            if (checkers[targetCell.index]) {
+                ret = { status: "fail" };
             }
         }
+        if (movingBackward) {
+            //Find the crossed checkers
+        }
+        if (
+            draggedChecker.checkerType === "king" ||
+            (ret.status === "pass" && isKingColumn)
+        ) {
+            ret.isKing = true;
+        }
+
         return ret;
     };
 
@@ -255,6 +306,7 @@ const Board = ({
         return line.map((cell, key) => {
             return (
                 <div
+                    key={key}
                     className={"cell " + cell.color}
                     tag={cell.index}
                     row={cell.row}
@@ -264,6 +316,7 @@ const Board = ({
                 >
                     {checkers.get(cell.index) ? (
                         <CheckerFactory
+                            key={cell.index}
                             cell={cell}
                             checkerColor={
                                 checkers.get(cell.index)?.checkerColor
@@ -274,8 +327,8 @@ const Board = ({
                     ) : 1 !== 1 ? (
                         cell.index
                     ) : (
-                        ""
-                    )}
+                                ""
+                            )}
                 </div>
             );
         });
@@ -285,7 +338,7 @@ const Board = ({
         <div className="board">
             <Opponent name={"Opponent 1"} />
             {board.map((line, index) => {
-                return <div className="row">{drawRow(line)}</div>;
+                return <div key={index} className="row">{drawRow(line)}</div>;
             })}
             <Opponent name={"Opponent 2"} />
         </div>
